@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
     --bg-color: #1A1E23;
@@ -17,7 +18,191 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
 }
 
+html, body {
+    height: 100%;
+    background-color: var(--primary-color);
+    color: var(--white-text);
+}
 
+/* main section css style (start here) */
+.main-section {
+    width: 100vw;
+    height: 100vh;
+    background: url('assets/images/Background/main_bg.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-attachment: fixed;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 40px;
+}
+
+.vector img {
+    width: 789px;
+    height: 789px;
+    margin-left: 160px;  
+    margin-top: 100px;
+}
+
+.text-content {
+    max-width: auto;
+    margin-right: 200px;
+    
+}
+
+.welcome-text {
+    font-size: 25px;
+    color: var(--white-text);
+    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    font-size: 64px; 
+    font-weight: 800;
+    line-height: 1;
+    color: transparent;
+    background: linear-gradient(90deg, #CAFFF7,#12F7D6 );
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    font-style:inherit;
+    font-family: "Poppins", sans-serif;
+
+    
+}
+
+h1 span {
+    display: block;
+}
+
+.description {
+    margin-top: 12px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--white-text);
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    font-family: "Poppins", sans-serif;
+}
+
+.contact-btn {
+    padding: 18px 50px;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 40px;
+    color: var(--text-color);
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 30px rgba(18, 247, 214, 0.5), 0 4px 87.8px rgba(18, 247, 214, 0.5);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+}
+
+.contact-btn:active {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .vector img {
+        width: 80%;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    .text-content {
+        margin-left: 0;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .contact-btn {
+        padding: 15px 40px;
+        font-size: 18px;
+    }
+}
+
+/* main section css style (ends here) */
+
+
+
+
+
+/* empowering section css style (start here) */
+.empowering-section {
+    background-image: url('assets/images/Background/background.png');
+    background-size: cover;
+    background-position: left;
+    padding: 100px 10px;
+}
+
+.content-container {
+    max-width: 1500px;
+    text-align: left; 
+    margin: 0 auto;
+}
+
+.empowering-section h3 {
+    font-size: 64px;
+    font-weight: 1000;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #00594C, #009882);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-style: inherit;
+    font-family: "inter", sans-serif;
+}
+
+.empowering-section p {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: var(--bg-color);
+    font-family: "inter", sans-serif;
+    margin-bottom: 30px;
+}
+
+.cta-container {
+    background-image: url('assets/images/Background/Get%20your%20project%20estimation%20just%20in%20a%20few%20clicks_%20gradient.png');
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    color: #ffffff;
+    border-radius: 50px;
+    max-width: 100%;
+    margin-top: 98px;
+}
+
+.cta-container p {
+    color: #ffffff;
+    text-align: left;
+    font-size: 55px;
+    font-weight: 900;
+    max-width: 555px;
+    margin-left: 100px;
+
+}
