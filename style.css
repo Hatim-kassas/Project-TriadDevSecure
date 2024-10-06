@@ -32,6 +32,41 @@ body {
     overflow-x: hidden;
 }
 
+/* animations */ 
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at the original position */
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%); /* Start from the left */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* End at the original position */
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8); /* Start smaller */
+        opacity: 0;
+    }
+    to {
+        transform: scale(1); /* End at full size */
+        opacity: 1;
+    }
+}
+
 
 
 /* Navbar Styles */
@@ -230,6 +265,7 @@ div .welcome-text{
     background-size: cover;
     background-position: left;
     background-attachment: fixed;
+    
 }
 
 .content-container { /* Remove 'div' from here */
@@ -279,3 +315,125 @@ div .welcome-text{
     padding-left: 30px;
 }
 
+
+/* Services section styles*/
+.services {
+    background-image: url('assets/images/Background/services.png');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    color: white;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 40px;
+    color: #00d7a7;
+    margin-bottom: 15px;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.services p {
+    font-size: 30px;
+    margin-bottom: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    color : #DADADA;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(217, 217, 217, 0.1);
+    backdrop-filter: blur(40px);
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    text-align: left;
+    transition: transform 0.3s ease, background 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    text-align: left;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #d1d1d1;
+    font-family: "Inter", sans-serif;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: rgba(217, 217, 217, 0.2);
+}
+
+
+
+/* additional info section */
+.additional-info {
+    background: linear-gradient(to right, #00FFDA, #038774);
+    padding: 30px 0;
+}
+
+.info-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.additional-info h3 {
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    margin: 0 20px 0 0; /* Add right margin to create space between text and button */
+    font-family: "Inter", sans-serif;
+}
+
+.know-more-button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+}
+
+.know-more-button:hover {
+    background-color: #e0fff7;
+}
