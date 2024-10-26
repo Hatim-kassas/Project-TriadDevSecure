@@ -42,6 +42,7 @@ body {
     top: 0;
     transition: background-color 0.4s ease-in-out;
     padding-left: 30px;
+    z-index: 1000;
 }
 
 .navbar.scrolled {
@@ -140,7 +141,7 @@ body {
 
     .nav-links li {
         margin: 10px 0;
-        
+
     }
 
     .nav-links a {
@@ -154,7 +155,7 @@ body {
     .hamburger {
         display: flex;
         position: left;
-        
+
     }
 }
 
@@ -169,6 +170,26 @@ body {
     }
 
 }
+
+@media (max-width: 1440px){
+    .nav-links li {
+        margin-left: 12px;
+    }
+
+    div .text-content p.welcome-title{
+        font-size: 28px;
+    }
+
+    div .text-content p{
+        font-size: 18px;
+    }
+
+    div .text-content h1.title-SDSS{
+        font-size: 47px;
+    }
+
+}
+
 
 
 /* main section css style (start here) */
@@ -218,7 +239,7 @@ div .text-content h1 {
     font-weight: 700;
     line-height: 1.25;
     color: transparent;
-    background: linear-gradient(90deg, #CAFFF7,#12F7D6 );
+    background: linear-gradient(250deg, #CAFFF7,#12F7D6 );
     -webkit-background-clip: text;
     background-clip: text;
     margin-bottom: 14px;
@@ -333,7 +354,7 @@ div .welcome-text{
     background-size: cover;
     background-position: left;
     background-attachment: fixed;
-    
+
 }
 
 .content-container { /* Remove 'div' from here */
@@ -447,7 +468,8 @@ div .welcome-text{
 
 .services h2 {
     font-size: 40px;
-    color: #00d7a7;
+    font-weight: 900;
+    color: var(--secondary-color);
     margin-bottom: 15px;
     font-family: "Inter", sans-serif;
     letter-spacing: 2px;
@@ -456,7 +478,8 @@ div .welcome-text{
 }
 
 .services p {
-    font-size: 30px;
+    font-size: 18px;
+    font-weight: 300;
     margin-bottom: 50px;
     max-width: 1200px;
     margin-left: auto;
@@ -482,7 +505,6 @@ div .welcome-text{
     background: rgba(217, 217, 217, 0.1);
     backdrop-filter: blur(40px);
     transition: transform 0.3s ease, background 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
@@ -506,8 +528,9 @@ div .welcome-text{
 }
 
 .card p {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.7;
+    font-weight: 300;
     color: #d1d1d1;
     font-family: "Inter", sans-serif;
 }
@@ -616,3 +639,97 @@ div .welcome-text{
         font-size: 14px;
     }
 }
+
+/* Why Choose US Section */
+
+section.Section-Why-Choose-US {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: url('assets/images/Background/why_choose_us.png') no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 87px;
+}
+
+section.Section-Why-Choose-US::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(26, 30, 35, 0.9);
+    z-index: 1;
+}
+
+section.Section-Why-Choose-US div.Dev-Why-Choose-US {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 0 12%;
+}
+
+div h1.title-why-choose-us{
+   font-size: 40px;
+   font-weight: 900;
+   font-family: "Inter", sans-serif;
+   color: var(--secondary-color);
+}
+div p.paragh-at-tds{
+   margin-top: 24px;
+   font-size: 18px;
+   max-width: 1200px;
+   font-weight: 300;
+   font-family: "Inter", sans-serif;
+   color: rgb(174, 174, 174);
+   margin-bottom: 4%;
+}
+
+.cards-us {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+div.card-second-section {
+    padding: 36px 28px;
+    border-radius: 15px;
+    width: 340px;
+    text-align: left;
+    background: rgba(217, 217, 217, 0.1);
+    backdrop-filter: blur(40px);
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-second-section h3 {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 2.0;
+    color: #d1d1d1;
+    font-family: "Inter", sans-serif;
+}
+
+.card-second-section p {
+    font-size: 14px;
+    line-height: 1.3;
+    color: #d1d1d1;
+    font-family: "Inter", sans-serif;
+}
+
+.card-second-section:hover{
+    transform: scale(1.07);
+    background: rgba(217, 217, 217, 0.2);
+}
+
