@@ -264,11 +264,14 @@ body {
 }
 
 .content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 100%;
     margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .vector img {
@@ -343,19 +346,19 @@ div .welcome-text{
 }
 
 /* Responsive */
-@media (max-width: 1920px) {
+/* @media (max-width: 1920px) {
     .content-wrapper {
         margin-left: 8%;
-        
+
     }
     div .text-content h1 {
         font-size: 60px;
     }
-    
+
     .welcome-title {
         font-size: 35px;
     }
-}
+} */
 
 @media (max-width: 768px) {
     .welcome-title {
@@ -426,7 +429,7 @@ div .welcome-text{
 /* empowering section css style (start here) */
 
 .empowering-section {
-    background-image: url('assets/images/Background/background.png');
+    background-image: url('assets/images/Background/process.png');
     background-size: cover;
     background-position: left;
     background-attachment: fixed;
@@ -434,14 +437,14 @@ div .welcome-text{
 }
 
 .content-container { /* Remove 'div' from here */
-    max-width: 1500px;
+    max-width: 1400px;
     text-align: left;
     margin: 0 auto;
     padding: 80px 120px ;
 }
 
 .empowering-section h3 {
-    font-size: 56px;
+    font-size: 50px;
     font-weight: 800;
     margin-bottom: 25px;
     background: linear-gradient(90deg, #00594C, #009882);
@@ -458,6 +461,7 @@ div .welcome-text{
     margin-bottom: 30px; /* Adjusted margin for consistency */
     color: var(--bg-color);
     font-family: "Inter", sans-serif;
+    color: #363636;
 }
 
 .cta-container {
@@ -1279,8 +1283,8 @@ div.card-second-section {
     background: url('assets/images/Background/contact.png');
     font-family: Inter, sans-serif;
   }
-  
-  
+
+
   .image-and-text {
     flex: 1;
     color: white;
@@ -1291,25 +1295,25 @@ div.card-second-section {
     padding: 40px;
     box-sizing: border-box;
   }
-  
+
   .image-and-text img {
     max-width: 50%;
     height: auto;
     border-radius: 12px;
-  
+
   }
-  
+
   .image-and-text h6 {
     font-size: 4.5rem;
     margin: 20px 0;
   }
-  
+
   .image-and-text p {
     font-size: 1.5rem;
     color: var(--secondary-color);
     text-align: left;
   }
-  
+
   .form-container {
     flex: 1;
     background: transparent;
@@ -1319,7 +1323,7 @@ div.card-second-section {
     align-items: center;
     justify-content: center;
   }
-  
+
   .form {
     width: 100%;
     max-width: 800px;
@@ -1332,13 +1336,13 @@ div.card-second-section {
     padding: 40px;
     border-radius: 12px;
   }
-  
+
   .form-container .form-group {
     display: flex;
     flex-direction: column;
     gap: 2px;
   }
-  
+
   .form-container .form-group label {
     display: block;
     margin-bottom: 5px;
@@ -1346,10 +1350,10 @@ div.card-second-section {
     font-weight: 600;
     font-size: 15px;
     margin-top: 20px;
-    
-    
+
+
   }
-  
+
   .form-container .form-group input {
     width: 100%;
     padding: 12px 16px;
@@ -1358,9 +1362,9 @@ div.card-second-section {
     font-family: inherit;
     background-color: transparent;
     border: 1px solid #ffffff;
-    
+
   }
-  
+
   .form-container .form-group textarea {
     width: 100%;
     padding: 12px 16px;
@@ -1372,22 +1376,22 @@ div.card-second-section {
     background-color: transparent;
     font-family: inherit;
   }
-  
+
   .form-container .form-group input::placeholder {
     opacity: 0.5;
     color: #ffffff;
   }
-  
+
   .form-container .form-group input:focus {
     outline: none;
     border-color: var(--hover-color);
   }
-  
+
   .form-container .form-group textarea:focus {
     outline: none;
     border-color: var(--hover-color);
   }
-  
+
   .form-submit-btn {
     display: flex;
     align-items: center;
@@ -1404,9 +1408,9 @@ div.card-second-section {
     width: 100%;
     margin-top: 50px;
   }
-  
-  
-  
+
+
+
   .form-container .form-group select {
     width: 100%;
     padding: 12px 16px;
@@ -1423,25 +1427,25 @@ div.card-second-section {
     background-position: right 16px center;
     background-size: 12px;
   }
-  
+
   .form-container .form-group select:focus {
     outline: none;
     border-color: var(--hover-color);
   }
-  
+
   .form-container .form-group option {
     background-color: #000;
     color: #fff;
   }
-  
+
   .form-container .form-group select:hover {
-    border-color: var(--hover-color); 
+    border-color: var(--hover-color);
   }
-  
+
   .form-container .form-group label span {
     color: var(--hover-color);
   }
-  
+
   .form-container .form-group select:disabled {
     color: #d4d4d4;
     background-color: #2a2a2a;
@@ -1449,13 +1453,13 @@ div.card-second-section {
   .form-group-row {
     display: flex;
     justify-content: space-between;
-    gap: 20px; 
+    gap: 20px;
   }
-  
+
   .form-group {
-    width: 48%; 
+    width: 48%;
   }
-  
+
 /* Large screens (1920px and above) */
 @media (min-width: 1920px) {
     .contact-page {
