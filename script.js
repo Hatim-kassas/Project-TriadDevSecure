@@ -48,6 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+
+
 // Services
 document.addEventListener("DOMContentLoaded", () => {
     const servicesSection = document.querySelector(".our-services");
@@ -62,4 +65,33 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { threshold: 0.3 });
 
     observer.observe(servicesSection);
+});
+
+
+// empowring
+document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+            }
+        });
+    }, { threshold: 0.1 }); 
+    const sections = document.querySelectorAll(".empowering-section");
+    sections.forEach(section => observer.observe(section));
+});
+
+
+// services
+document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+            }
+        });
+    }, { threshold: 0.1 });
+
+    const animatedElements = document.querySelectorAll(".services h2, .services p, .card");
+    animatedElements.forEach(element => observer.observe(element));
 });

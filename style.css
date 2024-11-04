@@ -283,10 +283,27 @@ body {
 
 .welcome-title {
     font-size: 30px;
-    font-weight: 300;
-    color: var(--white-text);
+    font-weight: 400;
+    color: transparent;
     font-family: "Inter", sans-serif;
+    background: linear-gradient(270deg, #f1f5f4, #ffffff, #ffffff);
+    background-size: 300%; 
+    padding: 5px 0px;
+    border-radius: 50px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradient-animation 3s linear infinite;
 }
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
 
 .text-content{
     width: 100%;
@@ -297,17 +314,21 @@ div .text-content{
     margin-left: 10px;
 }
 
-div .text-content h1 {
+.text-content h1 {
     font-size: 54px;
     font-weight: 900;
     line-height: 1.25;
     color: transparent;
-    background: linear-gradient(250deg, #CAFFF7,#12F7D6 );
+    background: linear-gradient(250deg, #CAFFF7, #12F7D6);
     -webkit-background-clip: text;
     background-clip: text;
     margin-bottom: 14px;
-    font-style:inherit;
+    font-style: inherit;
     font-family: "Inter", sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: bottom;
 }
 
 
@@ -418,6 +439,41 @@ div .welcome-text{
         font-size: 13px;
     }
 }
+
+
+/* Keyframe for simple left fade-in animation */
+@keyframes fadeInLeft {
+    0% { opacity: 0; transform: translateX(-30px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Elements with fade-in left animation */
+.vector img {
+    animation: fadeInLeft 0.8s ease-in-out forwards 0.2s;
+    opacity: 0;
+}
+
+.welcome-title {
+    animation: fadeInLeft 0.8s ease-in-out forwards 0.3s;
+    opacity: 0;
+}
+
+.text-content h1 {
+    animation: fadeInLeft 0.8s ease-in-out forwards 0.4s;
+    opacity: 0;
+}
+
+.description {
+    animation: fadeInLeft 0.8s ease-in-out forwards 0.6s;
+    opacity: 0;
+}
+
+.contact-btn {
+    animation: fadeInLeft 0.8s ease-in-out forwards 0.8s;
+    opacity: 0;
+}
+
+
 
 
 /* main section css style (ends here) */
@@ -533,8 +589,24 @@ div .welcome-text{
     }
 }
 
+/* Initial styles for animations */
+.empowering-section .content-container,
+.empowering-section h3,
+.empowering-section p,
+.cta-container {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
 
-
+/* Triggered styles */
+.empowering-section.animate .content-container,
+.empowering-section.animate h3,
+.empowering-section.animate p,
+.empowering-section.animate .cta-container {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /* Services section styles*/
 .services {
@@ -544,6 +616,7 @@ div .welcome-text{
     padding: 50px 0;
     color: white;
     text-align: center;
+    background-attachment: fixed;
 }
 
 .services h2 {
@@ -620,6 +693,23 @@ div .welcome-text{
     background: rgba(217, 217, 217, 0.2);
 }
 
+/* Animation styles for cards and text elements */
+.services h2, .services p, .card {
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
+
+/* Triggered styles */
+.services.animate h2,
+.services.animate p,
+.card.animate {
+    transform: translateY(0);
+}
+
+/* Optional: Slight scale effect for cards */
+.card.animate {
+    transform: translateY(0) scale(1.05);
+}
 
 
 /* additional info section */
@@ -720,6 +810,35 @@ div .welcome-text{
     }
 }
 
+
+
+/* additional info slogan*/
+.additional-info-slogan {
+    background: linear-gradient(to left, #038774, #00FFDA 50%, #038774);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.info-content-slogan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; 
+}
+
+.additional-info-slogan h3 {
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    text-align: center; 
+}
+
+
+
 /* Why Choose Us Section */
 section.Section-Why-Choose-US {
     position: relative;
@@ -731,6 +850,7 @@ section.Section-Why-Choose-US {
     align-items: flex-start;
     justify-content: center;
     padding-top: 87px;
+    background-attachment: fixed;
 }
 
 section.Section-Why-Choose-US::before {
@@ -1148,6 +1268,7 @@ div.card-second-section {
 .our-services.active .description {
     opacity: 1;
     transform: translateY(0);
+    font-weight: 400;
 }
 
 .our-services .icons {
@@ -1174,29 +1295,43 @@ div.card-second-section {
     transform: scale(1.1);
 }
 
-.know-more-btn {
-    background-color: #333;
-    color: #fff;
-    font-size: 1.1rem;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 30px;
+button {
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease 0.8s, transform 0.8s ease 0.8s;
-}
-
-.our-services.active .know-more-btn {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.know-more-btn:hover {
-    background-color: #12F7D6;
-    transform: scale(1.05);
-}
+    font-weight: 700;
+    font-family: Helvetica, "sans-serif";
+    transition: all 0.2s;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #01000f;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    transition: transform 0.9s ease;
+  }
+  
+  button:hover {
+    background: #000e03;
+  }
+  
+  .text {
+    color: #fff;
+  }
+  
+  button > svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  button:hover svg {
+    transform: translateX(5px);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
 
 /* Responsive Styles */
 @media (max-width: 1920px) {
@@ -1280,8 +1415,9 @@ div.card-second-section {
 .contact-page {
     display: flex;
     height: 100vh;
-    background: url('assets/images/Background/contact.png');
+    background: url('assets/images/Background/contact.png') no-repeat;
     font-family: Inter, sans-serif;
+    background-attachment: fixed;
   }
 
 
@@ -1434,8 +1570,8 @@ div.card-second-section {
   }
 
   .form-container .form-group option {
-    background-color: #000;
-    color: #fff;
+    background-color: #ffffff;
+    color: #000000;
   }
 
   .form-container .form-group select:hover {
