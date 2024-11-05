@@ -47,7 +47,7 @@ body {
 
 .navbar.scrolled {
     background: #003932a1;
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(70px);
     transition: transform 0.3s ease, background 0.3s ease;
     border: 0 0 0 0 solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -204,29 +204,8 @@ body {
 
 @media (max-width: 1366px) {
     .navbar {
-        padding: 10px 15px;
-    }
-
-    .logo img {
-        width: 110px; /* Slightly smaller for compact layout */
-    }
-
-    .nav-links a {
-        font-size: 20px; /* Reduced font size for 1366px screens */
-    }
-
-    .nav-links li {
-        margin: 0 10px; /* Narrower spacing for more room */
-    }
-
-    .social-media {
-        margin-right: 50px;
-    }
-}
-
-@media (max-width: 1366px) {
-    .navbar {
-        padding: 10px 15px;
+        padding: 8px 12px;
+        height: 15%;
     }
 
     .logo img {
@@ -234,7 +213,7 @@ body {
     }
 
     .nav-links a {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .nav-links li {
@@ -242,11 +221,9 @@ body {
     }
 
     .social-media {
-        margin-right: 50px;
+        margin-right: 30px;
     }
 }
-
-
 }
 
 
@@ -366,20 +343,16 @@ div .welcome-text{
     color: var(--text-color);
 }
 
-/* Responsive */
-/* @media (max-width: 1920px) {
-    .content-wrapper {
-        margin-left: 8%;
 
-    }
+@media (max-width: 1366px) {
     div .text-content h1 {
-        font-size: 60px;
+        font-size: 45px;
     }
 
     .welcome-title {
-        font-size: 35px;
+        font-size: 25px;
     }
-} */
+}
 
 @media (max-width: 768px) {
     .welcome-title {
@@ -889,7 +862,7 @@ div p.paragh-at-tds {
    max-width: 1200px;
    font-weight: 300;
    font-family: "Inter", sans-serif;
-   color: rgb(174, 174, 174);
+   color: rgb(233, 233, 233);
    margin-bottom: 4%;
 }
 
@@ -1349,6 +1322,24 @@ button {
         padding: 10px 25px;
     }
 }
+
+
+@media (max-width: 1366px) {
+    .our-services h2 {
+        font-size: 2rem;
+    }
+    .our-services .description {
+        font-size: 1rem;
+    }
+    .our-services .icons img {
+        width: 300px;
+    }
+    .know-more-btn {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+}
+
 @media (max-width: 1024px) {
     .our-services h2 {
         font-size: 2rem;
