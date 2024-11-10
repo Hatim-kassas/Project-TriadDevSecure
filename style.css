@@ -277,7 +277,7 @@ body {
 .vector img {
     width: 610px;
     height: 590px;
-    margin-left: 170px;
+    margin-left: 150px;
     margin-top: 50px;
 }
 
@@ -287,7 +287,7 @@ body {
     color: transparent;
     font-family: "Inter", sans-serif;
     background: linear-gradient(270deg, #f1f5f4, #ffffff, #ffffff);
-    background-size: 300%; 
+    background-size: 300%;
     padding: 5px 0px;
     border-radius: 50px;
     background-clip: text;
@@ -354,6 +354,10 @@ div .welcome-text{
     cursor: pointer;
     box-shadow: 0 4px 30px rgba(18, 247, 214, 0.5), 0 4px 87.8px rgba(18, 247, 214, 0.5);
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-us-btn{
+    text-decoration: none;
 }
 
 .contact-btn:hover {
@@ -700,16 +704,16 @@ div .welcome-text{
 }
 
 /* Triggered styles */
-.services.animate h2,
+/* .services.animate h2,
 .services.animate p,
 .card.animate {
     transform: translateY(0);
-}
+} */
 
 /* Optional: Slight scale effect for cards */
-.card.animate {
+/* .card.animate {
     transform: translateY(0) scale(1.05);
-}
+} */
 
 
 /* additional info section */
@@ -826,7 +830,7 @@ div .welcome-text{
     max-width: 1500px;
     margin: 0 auto;
     padding: 0 20px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .additional-info-slogan h3 {
@@ -834,7 +838,7 @@ div .welcome-text{
     color: rgb(0, 0, 0);
     margin: 0;
     font-family: "Inter", sans-serif;
-    text-align: center; 
+    text-align: center;
 }
 
 
@@ -1309,29 +1313,29 @@ button {
     font-size: 15px;
     transition: transform 0.9s ease;
   }
-  
+
   button:hover {
     background: #000e03;
   }
-  
+
   .text {
     color: #fff;
   }
-  
+
   button > svg {
     width: 34px;
     margin-left: 10px;
     transition: transform 0.3s ease-in-out;
   }
-  
+
   button:hover svg {
     transform: translateX(5px);
   }
-  
+
   button:active {
     transform: scale(0.95);
   }
-  
+
 
 /* Responsive Styles */
 @media (max-width: 1920px) {
@@ -1534,15 +1538,20 @@ button {
     justify-content: center;
     font-family: inherit;
     color: #000000;
-    font-weight: 600;
+    font-weight: 700;
     background: #ffffff;
-    border: 1px solid #ffffff;
     padding: 12px 16px;
     font-size: inherit;
     border-radius: 6px;
     cursor: pointer;
     width: 100%;
     margin-top: 50px;
+    font-size: 18px;
+  }
+
+  .form-submit-btn:hover{
+    color: white;
+    background-color:  var(--linear-gradient);
   }
 
 
