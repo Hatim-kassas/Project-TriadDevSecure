@@ -7,7 +7,7 @@
         <title>
             TriadDevSecure
         </title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css?v=1.0">
     </head>
     <body>
         <main>
@@ -216,13 +216,28 @@
                 </svg>
                 </button>
 
+
+            </section>
+
+            <section class="extra-section">
+                <div class="extra-content">
+                    <h3>Learn More About Our <br> Security Solutions</h3>
+                    <img src="assets/images/tds/secure.png" alt="secure" class="secure">
+                </div>
             </section>
 
             <?php include 'form/contact-form.php'?>
         </main>
 
         <footer>
-
+            <section class="footer-section">
+                <div class="footer-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+                        <text x="50%" y="54%" font-size="30" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" dominant-baseline="middle">&copy;</text>
+                    </svg>
+                    <h1>2024 TDS. All Rights Reserved.</h1>
+                </div>
+            </section>
         </footer>
     </body>
     <script src="script.js"></script>

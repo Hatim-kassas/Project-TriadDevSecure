@@ -1395,14 +1395,31 @@ button {
 
 
 
+.extra-section{
+    background: linear-gradient(90deg, #014d41, #00ccad);
+    padding: 5px 35px;
+}
 
+.extra-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
+.extra-content h3{
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+    margin: 0 20px 0 0; /* Add right margin to create space between text and button */
+    font-family: "Inter", sans-serif;
+}
 
-
-
-
-
-
+.extra-content img.secure{
+    width: 12%;
+    height: 12%;
+}
 
 
 
@@ -1725,4 +1742,22 @@ button {
         font-size: 0.9rem;
         padding: 8px 14px;
     }
+}
+
+.footer-section{
+    background-color: var(--linear-gradient);
+    padding: 10px;
+}
+
+div.footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.footer-content h1{
+    font-size: 22px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: black;
 }
