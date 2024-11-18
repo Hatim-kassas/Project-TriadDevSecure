@@ -56,7 +56,7 @@
                         <img src="assets/images/vector/vector.png" alt="Vector Image">
                     </div>
                     <div class="text-content">
-                        <p class="welcome-title" id="welcome-title-id">Welcome To TriadDevSecure</p>
+                        <p class="welcome-title">Welcome To TriadDevSecure</p>
                         <h1 id="typing-effect">Seamless Development <br> Strong Security</h1>
                         <div class="welcome-text">
                             <p class="description">We Empower Businesses To Thrive In The Digital Age</p>
@@ -232,7 +232,7 @@
         <footer>
             <section class="footer-section">
                 <div class="footer-content">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" width="54" height="54">
                         <text x="50%" y="54%" font-size="30" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" dominant-baseline="middle">&copy;</text>
                     </svg>
                     <h1>2024 TDS. All Rights Reserved.</h1>

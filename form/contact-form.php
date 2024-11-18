@@ -16,11 +16,11 @@
         $sql = "INSERT INTO contacts (first_name, last_name, email, company, country, industry)
                 VALUES ('$firstName', '$lastName', '$email', '$company', '$country', '$industry')";
 
-        if ($conn->query($sql) === TRUE) {
-            echo "New record created successfully";
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
+        // if ($conn->query($sql) === TRUE) {
+        //     echo "New record created successfully";
+        // } else {
+        //     echo "Error: " . $sql . "<br>" . $conn->error;
+        // }
     }
 ?>
 
