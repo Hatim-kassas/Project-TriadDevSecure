@@ -347,37 +347,6 @@ div .welcome-text{
     color: var(--text-color);
 }
 
-@media (max-width: 1920px){
-    #typing-effect{
-        font-size: 65px;
-    }
-    .welcome-title{
-        font-size: 35px;
-    }
-    div.text-content .contact-btn{
-        font-size: 24px;
-    }
-    .vector img{
-        width: 710px;
-        height: 690px;
-    }
-}
-
-@media (max-width: 1440px){
-    #typing-effect{
-        font-size: 40px;
-    }
-    .welcome-title{
-        font-size: 25px;
-    }
-    div.text-content .contact-btn{
-        font-size: 18px;
-    }
-    .vector img{
-        width: 520px;
-        height: 500px;
-    }
-}
 
 @media (max-width: 1366px) {
     div .text-content h1 {
